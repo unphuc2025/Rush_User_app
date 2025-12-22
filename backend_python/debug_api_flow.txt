@@ -1,0 +1,9 @@
+Testing API flow for: +916300766577@phone.myrush.app
+1. Calling get_user_by_email...
+User found: 0a5c5a19-70d2-4952-a92e-1bbbe18c2d69
+   Phone: +916300766577
+2. Calling crud.get_profile...
+Profile found: 0a5c5a19-70d2-4952-a92e-1bbbe18c2d69
+   Phone: +916300766577
+3. Validating against ProfileResponse...
+Validation successful: {"phone_number":"+916300766577","full_name":"","age":null,"city":"","gender":null,"handedness":null,"skill_level":null,"sports":null,"playing_style":null,"id":"0a5c5a19-70d2-4952-a92e-1bbbe18c2d69","created_at":"2025-12-09T09:11:02.431453Z","updated_at":"2025-12-09T09:14:56.958296Z"}

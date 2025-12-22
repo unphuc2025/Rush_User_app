@@ -1,0 +1,7 @@
+Testing user creation for: +916300766577
+User not found, attempting to create...
+User created successfully: 0a5c5a19-70d2-4952-a92e-1bbbe18c2d69
+Profile created successfully: 0a5c5a19-70d2-4952-a92e-1bbbe18c2d69
+Verifying read...
+   User: Test User 
+   Profile: Test City

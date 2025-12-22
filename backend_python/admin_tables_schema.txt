@@ -1,0 +1,77 @@
+SCRIPT STARTED
+DATABASE CONNECTED
+=== ALL TABLES IN DATABASE ===
+Found 14 tables:
+   - admin_amenities
+   - admin_areas
+   - admin_branch_amenities
+   - admin_branch_game_types
+   - admin_branches
+   - admin_cities
+   - admin_courts
+   - admin_game_types
+   - admins
+   - adminvenues
+   - booking
+   - otp_verifications
+   - profiles
+   - users
+
+=== CHECKING ADMIN TABLES ===
+Checking admin_cities...
+   [EXISTS] Table admin_cities EXISTS
+   Columns (6):
+     - id (uuid) NOT NULL DEFAULT uuid_generate_v4()
+     - name (character varying) NOT NULL
+     - short_code (character varying) NOT NULL
+     - is_active (boolean) NULL DEFAULT true
+     - created_at (timestamp with time zone) NULL DEFAULT CURRENT_TIMESTAMP
+     - updated_at (timestamp with time zone) NULL DEFAULT CURRENT_TIMESTAMP
+   Rows: 4
+
+Checking admin_game_types...
+   [EXISTS] Table admin_game_types EXISTS
+   Columns (9):
+     - id (uuid) NOT NULL DEFAULT uuid_generate_v4()
+     - name (character varying) NOT NULL
+     - short_code (character varying) NOT NULL
+     - description (text) NULL
+     - icon (character varying) NULL
+     - icon_url (text) NULL
+     - is_active (boolean) NULL DEFAULT true
+     - created_at (timestamp with time zone) NULL DEFAULT CURRENT_TIMESTAMP
+     - updated_at (timestamp with time zone) NULL DEFAULT CURRENT_TIMESTAMP
+   Rows: 2
+
+Checking admin_courts...
+   [EXISTS] Table admin_courts EXISTS
+   Columns (12):
+     - id (uuid) NOT NULL DEFAULT uuid_generate_v4()
+     - branch_id (uuid) NOT NULL
+     - game_type_id (uuid) NOT NULL
+     - name (character varying) NOT NULL
+     - price_per_hour (numeric) NOT NULL
+     - price_conditions (jsonb) NULL DEFAULT '[]'::jsonb
+     - unavailability_slots (jsonb) NULL DEFAULT '[]'::jsonb
+     - images (ARRAY) NULL DEFAULT ARRAY[]::text[]
+     - videos (ARRAY) NULL DEFAULT ARRAY[]::text[]
+     - is_active (boolean) NULL DEFAULT true
+     - created_at (timestamp with time zone) NULL DEFAULT CURRENT_TIMESTAMP
+     - updated_at (timestamp with time zone) NULL DEFAULT CURRENT_TIMESTAMP
+   Rows: 1
+
+Checking adminvenues...
+   [EXISTS] Table adminvenues EXISTS
+   Columns (10):
+     - id (uuid) NOT NULL DEFAULT uuid_generate_v4()
+     - game_type (character varying) NOT NULL
+     - court_name (character varying) NULL
+     - location (text) NOT NULL
+     - prices (character varying) NOT NULL
+     - description (text) NOT NULL
+     - photos (ARRAY) NULL
+     - videos (ARRAY) NULL
+     - created_at (timestamp with time zone) NULL DEFAULT CURRENT_TIMESTAMP
+     - updated_at (timestamp with time zone) NULL DEFAULT CURRENT_TIMESTAMP
+   Rows: 1
+
