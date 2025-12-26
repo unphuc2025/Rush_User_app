@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.env.*
+!.env.example
+
+# Node / React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+.expo/
+dist/
+web-build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
